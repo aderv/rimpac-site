@@ -217,3 +217,32 @@ header {
         max-width: 300px;
     }
 }
+
+ul.list-styles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+ul.list-styles li {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+    color: #444;
+}
+
+ul.list-styles li:last-child {
+    border-bottom: none;
+}
+
+ul.list-styles li::before {
+    content: '♦';
+    color: #28a745;
+    font-size: 16px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
