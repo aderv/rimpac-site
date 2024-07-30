@@ -56,3 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
     calendar.settings.selected.year = 2024;
     calendar.update();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryContainer = document.querySelector('.gallery-grid');
+    if (galleryContainer) {
+        lightGallery(galleryContainer, {
+            selector: '.gallery-item',
+            plugins: [],
+            speed: 500,
+            backdropDuration: 400,
+        });
+    }
+});
