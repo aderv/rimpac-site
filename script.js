@@ -68,3 +68,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Código existente...
+
+    // Inicializar el mapa
+    var map = L.map('map').setView([9.315655077488108, -75.38853103742686], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Añadir marcador y popup
+    L.marker([9.315655077488108, -75.38853103742686]).addTo(map)
+        .bindPopup('Universidad de Sucre')
+        .openPopup();
+
+    // Asegurarse de que el mapa se actualice cuando se muestre la pestaña
+    document.querySelector('a[href="#inicio"]').addEventListener('click', function() {
+        setTimeout(function() {
+            map.invalidateSize();
+        }, 0);
+    });
+});
