@@ -70,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Código existente...
-
+    
     // Inicializar el mapa
     var map = L.map('map').setView([9.315655077488108, -75.38853103742686], 5);
 
