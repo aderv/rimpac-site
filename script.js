@@ -90,3 +90,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 0);
     });
 });
+
+// Cuenta regresiva
+document.addEventListener('DOMContentLoaded', () => {
+    // Fecha del evento: 5 de noviembre de 2024 a las 8:00 am
+    const eventDate = new Date(2024, 10, 5, 8, 0, 0).getTime() / 1000;
+
+    // Inicializar FlipDown
+    new FlipDown(eventDate, {
+        theme: 'dark',
+        headings: ["Días", "Horas", "Minutos", "Segundos"]
+    })
+        .start()
+        .ifEnded(() => {
+            console.log('¡La cuenta regresiva ha terminado!');
+        });
+
+    // Etiquetas en español
+    setTimeout(() => {
+        document.querySelectorAll('.flipdown-theme-dark .rotor-group-heading').forEach((heading) => {
+            switch (heading.textContent.toLowerCase()) {
+                case 'days':
+                    heading.textContent = 'Días';
+                    break;
+                case 'hours':
+                    heading.textContent = 'Horas';
+                    break;
+                case 'minutes':
+                    heading.textContent = 'Minutos';
+                    break;
+                case 'seconds':
+                    heading.textContent = 'Segundos';
+                    break;
+            }
+        });
+    }, 100);
+});

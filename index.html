@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rimpac II</title>
-    <link rel="icon" href="/images/afed-w.png" type="image/png">
+    <link rel="icon" href="/images/afed-w-favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
@@ -13,6 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
 </head>
 
 <body>
@@ -29,11 +31,17 @@
             </ul>
         </nav>
         <div class="header-content">
-            <h1 class="main-title">Segunda Reunión Internacional de Matemáticas Puras y Aplicadas del Caribe (RIMPAC), <br>
-            Sincelejo-Colombia</h1>
-            <div class="ecard">
-                <div id="myCalendar"></div>
+            <div class="logo-rimpac">
+                <img src="images/rimpac-es-w.png" alt="Logo 2">
             </div>
+            <div class="ecard">
+                <div id="myCalendar"></div>                
+            </div>
+            <div class="regresiva">
+                <div id="flipdown" class="flipdown"></div>
+            </div>
+            
+            
         </div>
         <!-- <div class="hero-image"></div> -->
         
@@ -236,9 +244,7 @@
             <div class="logo-box">
                 <img src="images/afed-w.png" alt="Logo 1">
             </div>
-            <div class="logo-box">
-                <img src="images/rimpac-es-w.png" alt="Logo 2">
-            </div>
+            
             <div class="logo-box">
                 <img src="images/cimat-es-w.png" alt="Logo 3">
             </div>
