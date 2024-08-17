@@ -8,9 +8,30 @@ body, html {
     background-color: #ffffff;
 }
 
+main {
+    /* max-width: 1200px; */
+    width: 100%;
+    /* padding: 20px 0; */
+    /* margin: 0px auto; */
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
 section{
-    margin-top: 2em;
-    padding: 2em;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    padding: 0;
+}
+.subsection{
+    width: 80%;
+    margin: 0px auto;
+    max-width: 50em;
 }
 
 #main-nav {
@@ -58,11 +79,43 @@ section{
 }
 
 .hero-image {
-    height: 500px; 
-    background-image: url('images/unisucre.jpg');
     background-size: cover;
     background-position: center;
 }
+
+.image-inicio {
+    height: 500px; 
+    background-image: url('images/unisucre.jpg');
+}
+.image-comite {
+    height: 400px; 
+    background-image: url('images/integrantes3.jpg');
+}
+.image-conferencias {
+    height: 500px; 
+    background-image: url('images/evento7.jpg');
+}
+.image-cursillo {
+    height: 500px; 
+    background-image: url('images/evento8.jpg');
+}
+.image-ponencia {
+    height: 500px; 
+    background-image: url('images/evento9_1.jpg');
+}
+.image-inscripciones {
+    height: 500px; 
+    background-image: url('images/evento12_1.jpg');
+}
+
+.image-anteriores {
+    height: 500px; 
+    background-image: url('images/evento2.jpg');
+}
+
+/* .image-conferencias {
+
+} */
 
 header {
     position: relative;
@@ -70,7 +123,7 @@ header {
 
 .header-content {
     position: sticky;
-    top: 4em;
+    top: 5em;
     font-size: 100%;
     left: 0;
     right: 0;
@@ -151,19 +204,7 @@ header {
 }
 
 
-main {
-    max-width: 1200px;
-    width: 80%;
-    margin: 0px auto;
-}
 
-.content {
-    display: none;
-}
-
-.content.active {
-    display: block;
-}
 
 .grid {
     display: grid;
@@ -416,6 +457,7 @@ h2.separador:hover {
 
 
 .contenedor-pestanas {
+    margin-top: 2em;
     display: flex;
     background-color: #f1f3f5;
     border-radius: 8px 8px 0 0;
