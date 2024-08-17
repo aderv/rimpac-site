@@ -126,3 +126,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, 100);
 });
+
+
+
+function cambiarPestana(idPestana) {
+    // Ocultar todos los contenidos
+    document.querySelectorAll('.contenido-pestana').forEach(contenido => {
+      contenido.classList.remove('contenido-visible');
+    });
+    
+    // Mostrar el contenido seleccionado
+    document.getElementById(idPestana).classList.add('contenido-visible');
+    
+    // Actualizar las clases de las pestañas
+    document.querySelectorAll('.pestana').forEach(pestana => {
+      pestana.classList.remove('pestana-activa');
+    });
+    
+    // Activar la pestaña seleccionada
+    event.target.classList.add('pestana-activa');
+}
