@@ -146,3 +146,4 @@ function cambiarPestana(idPestana) {
     // Activar la pestaña seleccionada
     event.target.classList.add('pestana-activa');
 }
+

@@ -18,8 +18,14 @@
 </head>
 
 <body>
-    <nav id="main-nav">
-        <ul>
+    
+    <nav id="main-nav">   
+        <button class="menu-toggle" aria-label="Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>     
+        <ul class="nav-list">
             <li><a href="#inicio" class="active">Inicio</a></li>
             <li><a href="#comite">Comité</a></li>
             <li><a href="#conferencias">Conferencias</a></li>
@@ -30,17 +36,30 @@
         </ul>
     </nav>
 
-    <!-- <header class="hero-image">   
-        <div class="header-content">            
-            <div class="ecard">
-                <div id="myCalendar"></div>                
-            </div>
-            <div class="regresiva">
-                <div id="flipdown" class="flipdown"></div>
-            </div>     
-        </div>
-    </header>     -->
+    <script>
+       // script.js
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const navLinks = document.querySelectorAll('.nav-list a');
 
+    // Toggle menu visibility when clicking on the menu button
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+
+    // Hide the menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) { // Only on small screens
+                navList.classList.remove('active');
+            }
+        });
+    });
+    });
+
+    </script>
+   
     <main>
 
         <section id="inicio" class="content active">       
@@ -444,7 +463,7 @@
                   
                 <div id="memorias" class="contenido-pestana contenido-visible">
                     <div class="pdf-responsive">
-                        <iframe src="memorias-2023.pdf" class="pdf-frame"></iframe>
+                        <iframe src="memorias-2023.pdf" class="pdf-frame" allow="fullscreen" height="100%"></iframe>
                     </div>
                 </div>
                 
