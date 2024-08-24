@@ -147,3 +147,36 @@ function cambiarPestana(idPestana) {
     event.target.classList.add('pestana-activa');
 }
 
+
+// para saltar a la pestaña de inscripciones desde la pestaña de envío de ponencias
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').slice(1);
+            const targetTab = document.getElementById(targetId);
+            
+            // Ocultar todas las pestañas
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Mostrar la pestaña objetivo
+            targetTab.classList.add('active');
+            
+            // Actualizar el menú de navegación
+            document.querySelectorAll('#main-nav a').forEach(navLink => {
+                navLink.classList.remove('active');
+                if (navLink.getAttribute('href') === `#${targetId}`) {
+                    navLink.classList.add('active');
+                }
+            });
+            
+            // Desplazarse al principio de la página
+            window.scrollTo(0, 0);
+        });
+    });
+});

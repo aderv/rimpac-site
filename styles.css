@@ -571,3 +571,10 @@ h2.separador:hover {
         grid-column: 1;
     }
 }
+
+.sesiones {
+    font-size: 80%;
+    font-style: italic;
+    margin-top: 0;
+    color: rgb(0, 94, 153);
+}
